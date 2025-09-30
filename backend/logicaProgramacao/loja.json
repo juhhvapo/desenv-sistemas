@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "blusa",
+        "quantidade": 8,
+        "preco": 20.0,
+        "em_estoque": true
+    },
+    {
+        "nome": "tenis",
+        "quantidade": 10,
+        "preco": 50.0,
+        "em_estoque": true
+    }
+]
