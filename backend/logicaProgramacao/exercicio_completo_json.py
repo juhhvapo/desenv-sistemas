@@ -47,3 +47,20 @@ with open ("petshop.json", "w")as arquivo:
 #---- Modificar pets ----
 id_pets_modificar = int(input("Digite o id para modificar: "))
 novo_nome = int(input("Digite o novo nome: "))
+nova_raca = input("Digite a nova raça: ")
+nova_idade = input("Digite a nova idade: ")
+novo_sexo = input("Digite o novo sexo: ")
+novo_nome_dono = input("Digite o novo nome do dono: ")
+novo_telefone_dono = input("Digite o novo telefone do dono: ")
+
+for pet in pets:
+    if pets['id'] == id_pets_modificar:
+        pet['nome'] = novo_nome
+        pet['raca'] = nova_raca
+        pet['idade'] = nova_idade
+        pet['sexo'] = novo_sexo
+        pet_encontrado = True
+        break;
+
+
+
