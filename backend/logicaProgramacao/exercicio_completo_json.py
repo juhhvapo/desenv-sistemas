@@ -62,5 +62,65 @@ for pet in pets:
         pet_encontrado = True
         break;
 
+if not pet_encontrado:
+    print("o pet com o id informado não foi encontrado")
+
+else:
+    with open ("petshop.json", "w") as arquivo:
+        json.dump(inventario, arquivo, indent = 4)
+    print("o arquivo foi alterado com sucesso!!")
+
+
+#listar pet do arquivo json
+    
+try:
+    with open ("petshop.json",'r') as arquivo:
+        inventario= json.load(arquivo)
+
+    if not inventario:
+        print("O arquivo está vazio!")
+
+    else:
+        print("----- Lista de pets cadastrados -----")
+        for pet in inventario:
+            print(f"\n-- Pet {pet.get('id')} --")
+            print(f"Nome: {pet.get('nome', 'n/a')}")
+            print(f"Raça: {pet.get('raca', 'n/a')}")
+            print(f"Sexo: {pet.get('sexo', 'n/a')}")
+            print(f"Idade: {pet.get('idade', 0)} anos")
+            print(f"Nome do dono: {pet.get('nome_dono', 'n/a')}")
+            print(f"Telefone do dono: {pet.get('telefone_dono', 'n/a')}")
+
+except FileNotFoundError:
+    print("arquivo não encontrado")
+
+
+#excluir pet no json
+
+try:
+    with open("petshop.json", "r") as arquivo:
+        inventario = json.load(arquivo)
+
+except FileNotFoundError:
+    print("Arquivo não encontrado")
+
+
+novo_inventario = []
+pet_excluido = False
+
+id_pet_excluir = int(input("digite o  id do pet para excluir: "))
+
+for pet in inventario:
+    if pet["id"] != id_pet_excluir:
+    #se o id for diferente adicionamos  a nova lista 
+        novo_inventario.append(pet)
+    else:
+        print("pet removido com sucesso!!")
+        pet_excluido = True
+
+else:
+    with open('petshop.json', 'w') as arquivo:
+        json.dump(novo_inventario, arquivo, indent=4)
+        print('o arquivo foi atualizado, pet removido')
 
 
