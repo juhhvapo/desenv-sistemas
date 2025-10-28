@@ -32,3 +32,10 @@ def alterar_tarefa (request, tarefa_id):
         tarefa.save() #salva as alterações no objeto existente
         return redirect('lista_tarefas')
     return render(request,'tarefas/form_tarefa.html', {'tarefa': tarefa})
+
+def excluir_tarefa (request, tarefa_id):
+    tarefa= get_object_or_404(Tarefa, pk= tarefa_id)
+    if request.method == 'POST':
+        tarefa.delete () #deleta o objeto no banco
+        return redirect('lista_tarefas')
+    return render(request,'tarefas/confirmar_exclusao.html', {'tarefa': tarefa})
