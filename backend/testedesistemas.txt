@@ -1,0 +1,125 @@
+O QUE É QUALIDADE DE SOFTWARE?
+
+- Performance - Velocidade
+- Usabilidade - O quão fácil de usar é o sistema
+- Manutenibilidade - É fácil corrigir erros?
+- Confiabilidade - O software funciona corretamente
+
+
+O CUSTO DO BUG - PORQUE TESTAR IMPORTA?
+
+- 1996 - Erro conversão de dados
+- Prejuízo - U$370 milhões 
+- 1999 - Nasa - Perdeu uma sonda
+- Prejuízo - U$125 milhões
+- 1994 - Intel - Cálculo do processador 
+- Prejuízo - U$475 milhões 
+
+
+DIFERENÇA Qa x Qe
+                            Foco: Processos
+                           /
+Qa - Garantia de qualidade 
+                           \             
+                            Prevenir defeitos
+
+                            Foco: Produto
+                           /
+Qe - Controle de qualidade 
+                           \
+                            Encontrar defeitos 
+
+
+MODELO CASCATA
+
+Requisitos -> Análise -> Projeto -> Codificação -> Implantação
+
+MODELO V 
+
+                                   Teste de Sistemas, Teste de Integração
+                                                     |
+Requisitos -> Arquitetura -> Projeto -> Código -> Unidade
+                                |
+                        Teste de Aceitação      
+
+
+METODOLOGIAS ÁGEIS
+
+Daily - Reunião Diária (15 min)
+
+Squad - Time de Desenvolvedores 
+
+Sprint - Pacote com as implementações do Periodo -> Semanal e Quinzenal
+
+
+HARD SKILLS - HABILIDADES TÉCNICAS
+
+- Lógica de Programação 
+
+- Conhecimento do Negócio 
+
+
+SOFT SKILLS
+
+- Pensamento Crítico        - Atenção nos detalhes 
+
+- Comunicação Clara         - Pessimismo Construtivo
+
+
+ATIVIDADE 
+
+Cenário: Aiq Fome 
+
+- Liste 10 coisas que poderiam dar errado no sistema
+
+- Problemas de localização: O aplicativo não passa a localização correta para o entregador 
+- Problemas de pedidos: A loja não está fazendo o produto e o aplicativo da a opção de pedir
+- Pagamento não Processado: O cliente paga mas o sistema não notifica o pagamento 
+- Falha no Sistema: Cartão de crédito ou dados pessoais do cliente são vazados
+- Falha de Comunicação: O aplicativo falha na comunicação com o entregador e com a loja fazendo o pedido atrasar
+- Falha no servidor: o aplicativo fica fora do ar e impede os usuários de fazer pedidos 
+- Notificação falhando: O usuário não recebe confirmação do pedido ou aviso de entrega
+- Erros de Integração com restaurantes: O pedido chega incompleto ou com informações erradas
+- Pedidos duplicados: O usuário clica uma vez, mas o pedido é enviado duas vezes 
+- Erro no cálculo do valor total: O aplicativo soma errado taxas, descontos ou frete
+
+
+TIPOS DE TESTES
+
+- Níveis de teste - (unidade, integração, sistema)
+
+- Técnicas de teste - (caixa "preta", "branca", "cinza")
+
+- Categorias de teste - Funcionais e não-funcionais 
+
+
+NÍVEIS DE TESTE 
+
+Sistema (end-to-end) ->  -> Sistema completo
+Integração -> add. Funcionalidade no sistema
+Unidade -> Uma funcionalidade
+
+
+TÉCNICAS DE TESTES - AS "CAIXAS"
+
+- Caixa Preta - O "tester" não conhece o código. Testa somente a funcionalidade
+
+- Caixa Branca - O "tester" tem acesso total ao código para realizar os testes e sugerir correções
+
+- Caixa Cinza - O "tester" tem um breve Conhecimento do código e testa a funcionalidade
+
+
+CATEGORIAS DE TESTES
+
+                                          Cadastro 
+                                         /
+- Funcionais - funcionalidade do sistema - Lista
+                                         \
+                                          Integração
+
+
+                   Performance
+                  /
+- Não-funcionais - Usabilidade
+                 \
+                  Confiabilidade
