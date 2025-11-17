@@ -123,3 +123,57 @@ CATEGORIAS DE TESTES
 - Não-funcionais - Usabilidade
                  \
                   Confiabilidade
+
+O QUE É UM PLANO DE TESTES?
+
+- É o "mapa" que guia a equipe de testes 
+- Define "o que", "como", "quando" e "quem" irá realizar os testes
+- Contém todos os testes que serão realizados naquele momento
+
+O QUE É UM CASO DE TESTE?
+
+- É a menor unidade dos testes
+- Realizar um teste em particular, de forma específica
+
+ANATOMIA DE UM CASO DE TESTE
+
+- Todo caso de teste eficaz deve ter:
+- ID único              - Passos para execução        - Resultado obtido
+- Título descritivo     - Dados de testes
+- Pré-condições         - Resultado esperado
+
+EXEMPLO:
+
+ID: CT(caso de teste)-gmail- 001
+TÍTULO: Login com usuário e senha válidos
+PRÉ-CONDIÇÕES: Estar na página inicial de login do gmail
+               Possuir uma conta de usuário e senha válidos
+
+Passos: Digitar o e-mail
+        Digitar a senha
+        Clicar em "entrar"
+
+Dados do teste: e-mail: usuário@gmail.com
+                senha: teste123
+
+Resultado esperado: O usuário deve ser autenticado e direcionado para a tela inicial do gmail
+
+Resultado obtido: O teste funcionou como o esperado
+
+O QUE É UM BUG REPORT?
+
+- É um documento formal que comunica um erro encontrado
+
+- Permite que o desenvolvedor entenda e reproduza o erro
+
+MANTRA/DITADO DE QA: "Um bug que não pode ser reproduzido não pode ser corrigido"
+
+PORQUE ESSE BUG REPORT É INUTIL?
+
+Títilo: o botão quebrou
+Descrição: Fui criar uma tarefa e o botão salvar não funciona
+
+O QUE FALTA:
+
+Qual botão? em que tela? o que significa "não funciona"?
+Qual era o resultado esperado?
